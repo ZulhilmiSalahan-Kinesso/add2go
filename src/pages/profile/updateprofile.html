@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h1>Update Profile</h1>
+    <h5>Basic Information</h5>
+    <ion-item class="full">
+      <ion-input type="text" placeholder="Full Name" [value]="update_fullname" [(ngModel)]="update_fullname"></ion-input>
+    </ion-item>
+
+    <ion-item class="full">
+      <ion-input type="number" placeholder="Identificaiton Number" [value]="update_icnum" [(ngModel)]="update_icnum"></ion-input>
+    </ion-item>
+
+    <h5>Home Address</h5>
+    <ion-item class="full">
+      <ion-textarea type="text" placeholder="Home Address" [value]="update_home_address" [(ngModel)]="update_home_address"></ion-textarea>
+    </ion-item>
+    <ion-item class="full">
+      <ion-input type="text" placeholder="Postcode" [value]="update_home_postcode" [(ngModel)]="update_home_postcode"></ion-input>
+    </ion-item>
+    <ion-item class="full">
+      <ion-input type="text" placeholder="City" [value]="update_home_city" [(ngModel)]="update_home_city"></ion-input>
+    </ion-item>
+    <ion-item class="full">
+      <ion-label>State</ion-label>
+      <ion-select [(ngModel)]="update_home_state" multiple="false">
+        <ion-option>Johor</ion-option>
+        <ion-option>Melaka</ion-option>
+        <ion-option>Negeri Sembilan</ion-option>
+        <ion-option>Sabah</ion-option>
+        <ion-option>Sarawak</ion-option>
+        <ion-option>Kedah</ion-option>
+        <ion-option>Pahang</ion-option>
+        <ion-option>Terengganu</ion-option>
+        <ion-option>Selangor</ion-option>
+        <ion-option>Perak</ion-option>
+        <ion-option>Pulau Pinang</ion-option>
+        <ion-option>Kelantan</ion-option>
+        <ion-option>Kuala Lumpur</ion-option>
+        <ion-option>Labuan</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <p><button ion-button class="full" (click)="updatelocumprofile()">Update Profile</button></p>
+</ion-content>

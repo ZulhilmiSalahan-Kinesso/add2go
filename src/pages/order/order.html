@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Sell Item</h2>
+  <ion-list>
+    <ion-item *ngFor="let itemSell of itemSell | async">
+      <ion-thumbnail item-start>
+        <img [src]="itemSell.pic">
+      </ion-thumbnail>
+      <h2>{{itemSell.title}}</h2>
+      <p>{{itemSell.buycount}} Order</p>
+      <button ion-button color="light" item-end (click)="openModal({charNum: itemSell.$key})">View</button>
+      <button ion-button color="danger"  item-end (click)="deleteSellItem(itemSell)">Delete</button>
+    </ion-item>
+  </ion-list>
+
+  <h2>Buy Item</h2>
+  <ion-list>
+    <ion-item *ngFor="let itemBuy of itemBuy | async">
+      <ion-thumbnail item-start>
+        <img [src]="itemBuy.itempic">
+      </ion-thumbnail>
+      <h2>{{itemBuy.itemname}}</h2>
+      <h3>RM {{itemBuy.itemprice}}</h3>
+      <p>Description : {{itemBuy.itemdesc}}</p>
+      <button ion-button color="danger"  item-end (click)="deleteBuyItem(itemBuy, itemBuy.itemkey)">Delete</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,14 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content padding>
-  The world is your oyster.
+  <br />
+  <h1>Add2Go</h1>
+  <br />
+  <br />
+  <div padding class="error" *ngIf="error">
+    <p>Error Here {{error}}</p>
+  </div>
+  <p><button ion-button class="full" (click)="loginUserWithFacebook()">Facebook</button></p>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    <button ion-button class="half" (click)="openSignUpPage()">Sign Up</button>
+    <button ion-button class="half" (click)="openLoginPage()">Log In</button>
   </p>
+  <p style="width:80%; text-align: center; margin: auto;"> By Signing up you agree to <b>Terms of Service</b> and <b>Privacy Policy</b></p>  
 </ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col><img src={{profile_image}}/></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+  <h2>Basic Profile</h2>
+  <p>Username : {{profile_username}}</p>
+  <p>Email : {{profile_email}}</p>
+  <p>Full Name : {{profile_fullname}}</p>
+  <p>IC Number : {{profile_icnum}}</p>
+
+  <h2>Home Address</h2>
+  <p>Home Address : {{profile_home_address}}</p>
+  <p>Postcode : {{profile_home_postcode}}</p>
+  <p>City : {{profile_home_city}}</p>
+  <p>State : {{profile_home_state}}</p>
+
+  <p><button ion-button (click)="gotoupdateprofile()" class="full">Update Profile</button></p>
+  <p><button ion-button (click)="gotoresetpassword()" class="full">Reset Password</button></p>
+  <p><button ion-button (click)="logout()" class="full">Log Out</button></p>
+</ion-content>

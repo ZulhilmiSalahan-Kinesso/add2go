@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ item.name }}</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngFor="let item of item | async">
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.pic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.title}}</h2>
+    <p>Description : {{item.description}}</p>
+    <p>Price : RM {{item.price}}</p>
+    <p>Seller Name : {{item.creatorname}}</p>
+    <p>Total Buyer : {{item.buycount}}</p>
+  </div>
+  </div>
+</ion-content>

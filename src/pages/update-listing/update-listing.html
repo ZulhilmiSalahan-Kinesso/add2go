@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update Listing</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h5>Basic Listing Information</h5>
+    <ion-item class="full">
+      <ion-input type="text" placeholder="Title" [value]="update_title" [(ngModel)]="update_title"></ion-input>
+    </ion-item>
+
+    <ion-item class="full">
+      <ion-input type="text" placeholder="Descrition" [value]="update_desc" [(ngModel)]="update_desc"></ion-input>
+    </ion-item>
+
+    <ion-item class="full">
+      <ion-input type="number" placeholder="Price" [value]="update_price" [(ngModel)]="update_price"></ion-input>
+    </ion-item>
+
+    <p><button ion-button class="full" (click)="updatelisting()">Update Listing</button></p>
+</ion-content>

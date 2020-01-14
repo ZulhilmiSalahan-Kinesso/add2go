@@ -1,0 +1,18 @@
+page-sell-detail {
+  .item-profile {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+  }
+
+  .item-detail {
+    width: 100%;
+    background: white;
+    position: absolute;
+  }
+  
+  ion-label{
+    white-space: inherit;
+  }
+}
