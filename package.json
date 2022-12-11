@@ -32,7 +32,7 @@
     "@ngx-translate/http-loader": "0.0.3",
     "angularfire2": "^2.0.0-beta.8",
     "cordova-android": "^7.1.4",
-    "cordova-browser": "^5.0.4",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-firebase": "^0.1.21",
